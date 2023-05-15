@@ -117,6 +117,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
+    text-decoration: none;
   }
   
   .dropdown-content {
