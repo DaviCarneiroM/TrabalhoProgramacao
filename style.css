@@ -113,3 +113,11 @@ body {
 .texto-rodape {
     color: white;
 }
+
+.dropdown-content {
+    display: none;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
