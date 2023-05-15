@@ -110,6 +110,12 @@ body {
     color: white;
 }
 
+.link-2 {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
 .texto-rodape {
     color: white;
 }
@@ -133,14 +139,9 @@ body {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-size: small;
   }
   
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
-.link-2 {
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
-}
