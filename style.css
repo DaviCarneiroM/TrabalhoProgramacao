@@ -138,3 +138,9 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+.link-2 {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
