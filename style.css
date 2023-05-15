@@ -105,11 +105,11 @@ body {
     padding: 12px 0;
 }
 
-.texto-rodape {
+.link {
+    text-decoration: none;
     color: white;
 }
 
-.link {
-    text-decoration: none;
+.texto-rodape {
     color: white;
 }
