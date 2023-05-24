@@ -8,7 +8,7 @@ body {
 }
 
 .cabeçalhoR {
-    background-color:#4B0082;
+    background-color:#8b1adc;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -64,7 +64,7 @@ body {
 }
 
 #introdução {
-    background-color:#BA55D3;
+    background-color:#ad64e2;
     color: white;
     display: flex;
     justify-content: center;
