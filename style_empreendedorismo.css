@@ -1,0 +1,59 @@
+.container {
+    position: relative;
+  }
+  
+  label {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  .checkmark {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .checkmark:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .bandeja {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked ~ .checkmark:before {
+    opacity: 1;
+  }
+  
+  input[type="checkbox"]:checked ~ #bandeja {
+    display: block;
+  }
+  
