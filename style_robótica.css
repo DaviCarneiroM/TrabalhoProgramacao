@@ -63,3 +63,24 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
 }
+
+#introdução {
+    background-image: linear-gradient(#4B0082,#BA55D3);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 44px 0;
+}
+
+.introdução-div-conteúdo {
+    width: 35%;
+}
+
+.introdução-título {
+    padding: 24px 0;
+}
+
+.escola-imagem {
+    width: 25%;
+}

@@ -63,10 +63,6 @@ body {
     display: block;
 }
 
-.escola-imagem {
-    width: 25%;
-}
-
 #escola {
     background-image: linear-gradient(#221a6e,#2a8ae4);
     color: white;
@@ -82,6 +78,10 @@ body {
 
 .escola-título {
     padding: 24px 0;
+}
+
+.escola-imagem {
+    width: 25%;
 }
 
 .programação-imagem {
