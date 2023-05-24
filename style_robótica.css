@@ -63,6 +63,11 @@ body {
     display: block;
 }
 
+.nada {
+    background-color: white;
+    padding: 24px 0;
+}
+
 #introdução {
     background-image: linear-gradient(#4B0082,#BA55D3);
     color: white;
