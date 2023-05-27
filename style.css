@@ -119,6 +119,7 @@ body {
 #estudante {
     background-color:#dbdbdb;
     color: black;
+    padding-left: 24px;
 }
 
 .estudante-título {
