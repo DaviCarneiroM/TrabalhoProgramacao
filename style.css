@@ -84,10 +84,6 @@ body {
     width: 25%;
 }
 
-.programação-imagem {
-    width: 25%;
-}
-
 #programação {
     background-color: white;
     color: #2073c0;
@@ -105,21 +101,12 @@ body {
     padding: 24px 0;
 }
 
+.programação-imagem {
+    width: 25%;
+}
+
 #estudante {
     background-color:#dbdbdb;
-}
-
-.estudante-imagem {
-    width: 120px;
-    border-radius: 50%;
-}
-
-.estudante-icone {
-    width: 24px;
-}
-
-.estudante-div {
-    text-align: center;
 }
 
 .estudante-título {
@@ -130,6 +117,19 @@ body {
 .estudante-todos {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.estudante-div {
+    text-align: center;
+}
+
+.estudante-imagem {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.estudante-icone {
+    width: 24px;
 }
 
 .rodape {
