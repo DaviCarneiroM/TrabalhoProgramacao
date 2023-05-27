@@ -3,13 +3,24 @@
     padding: 0;
 }
 
+:root {
+    --branco-principal: #FFFFFF;
+    --cor-de-fundo: #1C1C1C;
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+
 body {
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .cabeçalho {
     background-color:#221a6e;
-    color: white;
+    color: var(--branco-principal);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,12 +39,12 @@ body {
 
 .link {
     text-decoration: none;
-    color: white;
+    color: var(--branco-principal);
 }
 
 .link-2 {
     text-decoration: none;
-    color: white;
+    color: var(--branco-principal);
     font-size: 24px;
 }
 
@@ -65,7 +76,7 @@ body {
 
 #escola {
     background-image: linear-gradient(#221a6e,#2a8ae4);
-    color: white;
+    color: var(--branco-principal);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,6 +154,6 @@ body {
 }
 
 .texto-rodape {
-    color: white;
+    color: var(--branco-principal)
 }
 
