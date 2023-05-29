@@ -3,7 +3,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: relative;
+    padding: 24px 0;
+}
 
 .cabeçalho-imagem {
     width: 15%;
