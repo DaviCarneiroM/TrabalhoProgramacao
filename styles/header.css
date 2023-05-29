@@ -1,11 +1,9 @@
 .cabeçalho {
     background-color:#221a6e;
-    color: var(--branco-principal);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 24px 0;
-}
+    position: relative;
 
 .cabeçalho-imagem {
     width: 15%;
