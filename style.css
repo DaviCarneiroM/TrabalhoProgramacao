@@ -1,8 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --branco-principal: #FFFFFF;
     --cor-de-fundo: #1C1C1C;
     --fonte-principal: 'Poppins', sans-serif;
 }
+
 
 body {
     background-color: var(--cor-de-fundo);
