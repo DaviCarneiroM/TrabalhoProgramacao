@@ -20,15 +20,15 @@
 
 
 body {
-    background-color: var(--cor-de-fundo);
-    color: var(--branco-principal);
-    font-family: var(--fonte-principal);
+    background-color: #EBECEE;
+    color: #FFFFFF;
+    font-family: "Poppins", "Josefin Sans";
     font-size: 16px;
     font-weight: 400;
 }
 
 .cabeçalho {
-    background-color: var(--branco);
+    background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +37,7 @@ body {
 
 #escola {
     background-image: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
-    color: var(--branco-principal);
+    color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +57,7 @@ body {
 }
 
 #programação {
-    background-color: white;
+    background-color: #FFFFFF;
     color: #2073c0;
     display: flex;
     justify-content: center;
@@ -116,6 +116,6 @@ body {
 }
 
 .texto-rodape {
-    color: var(--branco-principal)
+    color: #FFFFFF;
 }
 
