@@ -36,7 +36,7 @@ body {
 }
 
 #escola {
-    background-color: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    background-color: var(--azul-degrade);
     color: var(--branco-principal);
     display: flex;
     justify-content: center;
