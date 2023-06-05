@@ -27,10 +27,16 @@ body {
     font-weight: 400;
 }
 
-
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
 
 #escola {
-    background-color: #2073c0;
+    background-color: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
     color: var(--branco-principal);
     display: flex;
     justify-content: center;
