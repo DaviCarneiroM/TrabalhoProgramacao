@@ -1,46 +1,38 @@
-
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #EBECEE;
-    color: #FFFFFF;
-    font-family: "Poppins", "Josefin Sans";
-    font-size: 16px;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cabeçalho {
-    background-color: rgb(45, 52, 75);
+    background-color:#221a6e;
     color: white;
     display: flex;
     justify-content: space-around;
-    padding: 15px 0;
-    font-family: 'Ubuntu', sans-serif;
-    position: fixed;
-    top: 0;
-    width: 100%;
     align-items: center;
+    padding: 24px 0;
 }
 
 .cabeçalho-imagem {
-    width: 80px;
-    border-radius: 50%;
-    padding: 5px 5px;
-    height: auto;
+    width: 15%;
 }
 
-.foto-corpo {
-    width: 30%;
-    padding: 40px;
+.cabeçalho-lista-item {
+    display: inline-block;
+    margin: 0 16px;
+    font-size: 24px;
+}
+
+.escola-imagem {
+    width: 25%;
 }
 
 #escola {
-    background-image: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
-    color: #FFFFFF;
+    background-image: linear-gradient(#221a6e,#2a8ae4);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,12 +47,12 @@ body {
     padding: 24px 0;
 }
 
-.escola-imagem {
+.programação-imagem {
     width: 25%;
 }
 
 #programação {
-    background-color: #FFFFFF;
+    background-color: white;
     color: #2073c0;
     display: flex;
     justify-content: center;
@@ -76,13 +68,21 @@ body {
     padding: 24px 0;
 }
 
-.programação-imagem {
-    width: 25%;
-}
-
 #estudante {
     background-color:#dbdbdb;
-    color: black;
+}
+
+.estudante-imagem {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.estudante-icone {
+    width: 24px;
+}
+
+.estudante-div {
+    text-align: center;
 }
 
 .estudante-título {
@@ -95,19 +95,6 @@ body {
     grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
-.estudante-div {
-    text-align: center;
-}
-
-.estudante-imagem {
-    width: 120px;
-    border-radius: 50%;
-}
-
-.estudante-icone {
-    width: 24px;
-}
-
 .rodape {
     background-color: black;
     text-align: center;
@@ -118,7 +105,11 @@ body {
     padding: 12px 0;
 }
 
-.texto-rodape {
-    color: #FFFFFF;
+.copy {
+    color: white;
 }
 
+.link {
+    text-decoration: none;
+    color: white;
+}
