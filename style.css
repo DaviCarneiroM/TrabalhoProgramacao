@@ -128,11 +128,6 @@ li a,
     text-decoration: none;
 }
 
-li a:hover,
-.dropdown:hover .dropbtn {
-    background-color: rgb(0, 0, 0);
-}
-
 li.dropdown {
     display: inline-block;
     font-size: 20px;
