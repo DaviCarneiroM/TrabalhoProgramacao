@@ -160,7 +160,7 @@ li.dropdown {
 }
 
 .banner {
-    background: #3c30ad;
+    background-image: linear-gradient(#2a8ae4,#adcdeb);
     color: #FFFFFF;
     text-align: center;
     padding: 2.5em 2em;
@@ -190,6 +190,6 @@ li.dropdown {
     font-weight: 400;
     text-align: center;
     color: var(--branco);
-    background: url("../img/Lupa.svg") no-repeat;
+    background: url("../img/Lupa") no-repeat;
     background-position: 1em;
 }
