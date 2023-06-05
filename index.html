@@ -15,30 +15,20 @@
 
 <body>
     <header class="cabeçalho">
-        <img width="40" height="40" src="img/LogoCEP.png" alt="Logo do CEP" class="container__imagem">
-        <h1 class="container__titulo"><b class="container__titulo--negrito">Site</b>CEP</h1>
-        
-        <ul class="opções">
-            <li class="opções__item"><a href="#" class="opções__link">Sobre o site</a></li>
-            <li class="opções__item"><a href="#" class="opções__link">Sobre nós</a></li>
-            <input type="checkbox" id="opções-menu" class="opções__botão">
-            <label for="opções-menu" class="opções__rotulo">
-                <li class="opções__item">Categorias</li>
-            </label>  
-            <ul class="lista-menu">
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Robótica</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Empreededorismo</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Biotecnologia</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Programação</a>
-                </li>
-            </ul>
+        <img class="cabeçalho-imagem" src="img/LogoCEP.png" alt="Logo do CEP">
+        <p class="texto-cabecalho">Estilo de site</p>
+        <ul class="cabeçalho-lista">
+            <li class="cabeçalho-lista-item"> <a href="#">Sobre o site</a> </li>
+            <li class="cabeçalho-lista-item"> <a href="#">Sobre nós</a> </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Disciplinas</a>
+                <div class="dropdown-content">
+                    <a href="./Robótica/Robótica.html">Robótica</a>
+                    <a href="#">Empreededorismo/a>
+                    <a href="./Biotec/biotec.html">Biotecnologia</a>
+                    <a href="./Programação/prog.html">Programação</a>
+                </div>
+            </li>
         </ul>
     </header>
     

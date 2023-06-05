@@ -13,46 +13,29 @@ body {
     font-weight: 400;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-}
-
 .cabeçalho {
-    background-color: #FFFFFF;
+    background-color: rgb(45, 52, 75);
+    color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 15px 0;
+    font-family: 'Ubuntu', sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
     align-items: center;
-    position: relative;
 }
 
-.container__titulo,
-.container__titulo--negrito {
-    font-family: var(--fonte-secundarioS);
-    font-size: 30px;
+.cabeçalho-imagem {
+    width: 80px;
+    border-radius: 50%;
+    padding: 5px 5px;
+    height: auto;
 }
 
-.container__titulo {
-    font-weight: 400;
-    display: block;
-}
-
-.container__titulo--negrito {
-    font-weight: 700;
-}
-
-.opções {
-    display: flex;
-}
-
-.opções__item {
-    padding: 0 1em;
-    text-transform: uppercase;
-}
-
-.opções__link {
-    text-decoration: none;
-    color: var(--preto);
+.foto-corpo {
+    width: 30%;
+    padding: 40px;
 }
 
 #escola {
