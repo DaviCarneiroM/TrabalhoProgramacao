@@ -131,8 +131,8 @@ li a,
 li.dropdown {
     display: inline-block;
     font-size: 24px;
+    margin: 0 16px;
     padding: 15px 0px;
-    margin-left: 25px;
 }
 
 .dropdown-content {
