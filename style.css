@@ -31,7 +31,7 @@ body {
 }
 
 #escola {
-    background-image: linear-gradient(#2a8ae4,#6cb0f0);
+    background-image: linear-gradient(#34618a,#5d8ebb);
     color: white;
     display: flex;
     justify-content: center;
@@ -160,7 +160,7 @@ li.dropdown {
 }
 
 .banner {
-    background-image: linear-gradient(#221a6e,#2a8ae4);
+    background-image: linear-gradient(#221a6e,#34618a);
     color: #FFFFFF;
     text-align: center;
     padding: 2.5em 2em;
