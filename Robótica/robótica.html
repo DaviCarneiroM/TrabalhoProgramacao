@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robótica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Kumbh+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="robótica.css">
+</head>
+<body>
+    <!---CABEÇALHO--->
+    <header class="cabeçalho">
+        <div class="container">
+            <img src="img-robótica/CEP.png" alt="Logo do Colégio Estadual do Paraná" class="cabeçalho__imagem">
+            <h1 class="cabeçalho__título"><b class="cabeçalho__título--negrito">CEP</b> Robótica</h1>
+        </div>
+        <div class="container">
+            <a href="#carrossel" class="cabeçalho__link">
+                <div class="cabeçalho__item">Trabalho</div>
+            </a> 
+            <a href="#formulário" class="cabeçalho__link">
+                <div class="cabeçalho__item">Contato</div>
+            </a>
+            <div class="cabeçalho-lista">
+                <a href="javascript:void(0)" class="cabeçalho__link">
+                    <div class="cabeçalho__item">Disciplinas</div>
+                </a>
+                <div class="cabeçalho-lista__disciplinas">
+                    <a href="#" class="cabeçalho-lista__item pi">Página inicial</a>
+                    <a href="#" class="cabeçalho-lista__item">Empreendedorismo</a>
+                    <a href="#" class="cabeçalho-lista__item">Biotécnologia</a>
+                    <a href="#" class="cabeçalho-lista__item p">Programação</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!---BANNER--->
+    <section id="banner">
+        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+        <p class="banner__texto">Encontre no nosso site os projetos já feitos nas disciplinas do Novo Ensino Médio!</p>
+        <input type="search" class="banner__pesquisa" placeholder="O que você procura?">
+    </section>
+
+    <!---CARROSSEL--->
+    <section id="carrossel">
+        <div class="carrossel__conteúdo">
+            <h2 class="carrossel__título">Projeto sinaleiro</h2>
+            <p class="carrossel-texto__parágrafo">Projeto sinaleiro é o nome dado ao primeiro projeto desenvolvido na disciplina de Robótica, seu objetivo é construir um sistema que se assemelhe a uma sinaleiro através do computador com as plataformas disponibilizadas pelo estado, e depois refazer o projeto usando os objetos fornecidos pelo colégio.</p>
+            <h4>Material e métodos:</h4>
+            <p>Arduino Uno, placa de ensaio pequena, resistores(3), leds/pinos(3), fios(7) e cabo com entrada USB. Para iniciar a montagem do circuito, é preciso primeiro conectar o Arduino na placa de ensaio pequena utilizando um fio que saia do GND do Arduino e vá até a coluna do cátodo na placa. Em seguida, vamos colocar os LEDs nas colunas G, H e I, deixando um espaço de duas ou mais casas entre eles. Para criar um sinalizador, vamos trocar as cores dos LEDs respectivamente para verde, amarelo e vermelho. Agora, vamos conectar os fios na parte negativa de cada LED, que deve ser ligada à coluna do cátodo na placa. Em seguida, vamos conectar os três resistores de 220 ohms na parte positiva de cada LED. Para finalizar a montagem, vamos conectar cada resistor à placa, que possui casas numeradas de 0 a 13.</p>
+            <h4>Código em blocos:</h4>
+            <p>No código, vamos começar entendendo-o em blocos.
+            Primeiramente, usaremos o bloco "para sempre", que deixará o nosso código em loop. Em seguida, vamos definir o primeiro LED (pino), que será o verde, como ligado, utilizando o bloco "definir pino [número da casa no Arduino] como ALTO" dentro do "para sempre". Logo após, colocaremos o bloco "aguardar [7] [S (segundos)]" e, abaixo dele, outro bloco de definir pino, com o mesmo número de casa, mas com a descrição "BAIXO", que deixará o LED desligado. Repetiremos o processo para o LED amarelo, mudando o número da casa e a temporização para três segundos.Para o LED vermelho, repetiremos o processo de temporização, deixando-o ligado por cinco segundos.</p>
+            <h4>Código em texto:</h4>
+            <p>No código em texto, usaremos o comando "void setup()", abrindo chaves nele, para dizer que os componentes citados devem iniciar junto ao programa. Dentro dele, utilizaremos três comandos "pinMode([número da casa no Arduino], OUTPUT)", configurando os LEDs verde, amarelo e vermelho. Fecharemos as chaves do "void setup()" e escreveremos o comando "void loop()" abrindo chaves, para que os componentes citados entrem em loop. Dentro dele, utilizaremos o código "digitalWrite([número da casa no Arduino], HIGH)" para o LED verde, seguido do comando "delay(7000)" para manter o LED aceso por 7 segundos e, por último, o comando "digitalWrite([número da casa no Arduino], LOW)" para desligá-lo. Repetiremos esse processo para o LED amarelo, mas com um delay de 3000 milissegundos e para o LED vermelho, com um delay de 5000 milissegundos. É importante lembrar que o Tinkercad utiliza da linguagem C++.</p><br>    
+            <div class="carrossel-vídeo">
+                <video src="vídeo-robótica/projeto-sinaleiro.mp4" controls class="carrossel-vídeo__link"></video>
+            </div>
+        </div>
+    </section>
+
+    <!---FORMULÁRIO--->
+    <form id="formulário">
+        <div class="formulário__conteúdo">
+            <h2 class="formulário__título">Em caso de dúvidas, envie uma mensagem preenchendo o formulário abaixo.</h2>
+            <div class="formulário-campo">
+                <label for="nome">Seu nome:</label><br>
+                <input type="text" id="nome" name="Nome" placeholder="Digite seu nome" required class="formulário-campo__nome">
+            </div>
+            <div class="formulário-campo">
+                <label for="email">Seu e-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required class="formulário-campo__email">
+            </div>
+            <div class="formulário-campo">
+                <label for="mensagem">Sua mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required class="formulário-campo__mensagem"></textarea>
+            </div>
+            <div class="formulário-campo">
+                <input type="submit" name="enviar" value="Enviar" class="formulário-campo__enviar">
+            </div>
+        </div>
+    </form>
+
+    <!---RODAPÉ--->
+    <footer class="rodapé">
+        <p class="rodapé__texto">Trabalho desenvolvido na disciplina de programação.</p>
+        <div class="rodapé__itens">
+            <img src="img-robótica/CEP.png" alt="Logo do Colégio Estadual do Paraná" class="rodapé__imagem">
+            <p class="colégio">Colégio Estadual do Paraná</p>
+        </div>
+    </footer>
+</body>
+</html>

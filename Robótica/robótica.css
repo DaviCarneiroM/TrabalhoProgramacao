@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --branco: #FFFFFF;
+    --branco-transparente: #ffffffb7;
+    --preto: #000000;
+    --cinza: #d8d8d8;
+    --cinza-dois: #4e4e4e;
+    --cinza-três: #949494;
+    --cor-de-fundo: #D3D3D3;
+    --verde-degrade: linear-gradient(97.54deg, #031a00, #064606 35.49%, #19ff19 165.37%);
+    --fonte-principal: "Poppins";
+    --fonte-segundaria: "Josefin Sans";
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/*===================CABEÇALHO===================*/
+
+.cabeçalho {
+    background-color: var(--branco);
+    justify-content: space-around;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+}
+
+.cabeçalho__imagem {
+    padding: 0em 1em;
+    width: 60px;
+}
+
+.cabeçalho__título--negrito,
+.cabeçalho__título {
+    font-family: var(--fonte-segundaria);
+}
+
+.cabeçalho__título--negrito {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.cabeçalho__título {
+    font-weight: 400;
+    font-size: 25px;
+    padding: 1em;
+}
+
+.cabeçalho__item {
+    padding: 1.5em 1em;
+    font-size: 20px;
+}
+
+.cabeçalho__link {
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.cabeçalho-lista {
+    font-size: 20px;
+}
+
+.cabeçalho-lista__disciplinas {
+    border-radius: 0em 0.5em 0.5em 0.5em;
+    background-color: var(--branco);
+    position: absolute;
+    display: none;
+    top: 100%;
+}
+
+.cabeçalho-lista__item {
+    text-decoration: none;
+    color: var(--preto);
+    padding: 0.6em 1em;
+    display: block;
+}
+
+.pi {
+    border-radius: 0em 0.5em 0em 0em;
+}
+
+.p {
+    border-radius: 0em 0em 0.5em 0.5em;
+}
+
+.cabeçalho-lista:hover .cabeçalho-lista__disciplinas {
+    display: block;
+}
+
+.cabeçalho__item:hover,
+.cabeçalho-lista__item:hover {
+    background-color: var(--cinza);
+}
+
+/*===================BANNER===================*/
+
+#banner {
+    background: var(--verde-degrade);
+    padding: 11em 0em 5em 0em;
+    color: var(--branco);
+    text-align: center;
+}
+
+.banner__titulo {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.banner__texto {
+    font-weight: 500;
+    padding: 0.5em;
+}
+
+.banner__pesquisa {
+    border: 1px solid var(--branco);
+    background-color: transparent;
+    margin: 0.5em 0em 0em 0em;
+    color: var(--branco);
+    border-radius: 24px;
+    padding: 1em;
+    width: 35%;
+}
+
+.banner__pesquisa::placeholder {
+    font-family: var(--fonte-principal);
+    color: var(--branco-transparente);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.banner__pesquisa::-webkit-search-cancel-button {
+    display: none;
+}
+
+/*===================CARROSSEL===================*/
+
+#carrossel {
+    background: var(--branco);
+    justify-content: center;
+    color: var(--preto);
+    padding: 4em 0em;
+    display: flex;
+}
+
+.carrossel__conteúdo {
+    width: 75%;
+}
+
+.carrossel__título {
+    text-align: center;
+    padding: 0em 0em 1em 0em;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.carrossel-vídeo {
+    text-align: center;
+}
+
+.carrossel-vídeo__link {
+    width: 70%;
+}
+
+/*===================FORMULÁRIO===================*/
+
+#formulário {
+    background-color: var(--cinza-três);
+    justify-content: center;
+    text-align: center;
+    padding: 4em 0em;
+    display: flex;
+    width: 100%;
+}
+
+.formulário__conteúdo {
+    background: var(--branco);
+    border-radius: 0.5em;
+    padding: 3em 3em;
+}
+
+.formulário__título {
+    text-align: center;
+    font-size: 16px;
+    padding: 0.5em;
+    width: 300px;
+}
+
+.formulário-campo {
+    padding: 0.5em;
+}
+
+.formulário-campo__email,
+.formulário-campo__nome {
+    border-radius: 0.5em;
+    padding: 0.5em;
+    width: 300px;
+} 
+
+.formulário-campo__mensagem {
+    border-radius: 0.5em;
+    padding: 0.5em;
+    resize: none;
+    width: 300px;
+    height: 75px;
+}
+
+.formulário-campo__enviar {
+    border-radius: 1.25em;
+    cursor: pointer;
+    width: 315px;
+    padding: 1em;
+}
+
+.formulário-campo__enviar:hover {
+    background-color: var(--cinza);
+}
+
+/*===================RODAPÉ===================*/
+
+.rodapé {
+    background-color: var(--preto);
+    color: var(--branco);
+    text-align: center;
+    padding: 1em 0em;
+}
+
+.rodapé__itens {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.rodapé__imagem {
+    padding: 0.5em 0.5em 0em 0.5em;
+    width: 3%;
+}
+
+.colégio {
+    padding: 0.5em 0em 0em 0em;
+}
