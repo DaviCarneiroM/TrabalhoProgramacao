@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robótica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="robótica.css">
+</head>
+<body>
+    <!--CABEÇALHO-->
+    <header class="cabeçalho">
+        <div class="cabeçalho__conteúdo">
+            <img src="../Página-inicial/img/CEP.png" alt="Logo do Colégio Estadual do Paraná" class="cabeçalho__imagem">
+            <h1 class="cabeçalho__título">Robótica</h1>
+        </div>
+        <div class="cabeçalho__conteúdo">
+            <a href="../Página-inicial/index.html" class="cabeçalho__link">Página inicial</a>
+            <a href="#carrossel" class="cabeçalho__link">Projeto sinaleiro</a>
+            <div class="cabeçalho-lista">
+                <a href="javascript:void(0)" class="cabeçalho__link">Disciplinas</a>
+                <div class="cabeçalho-lista__disciplinas">
+                    <a href="#" style="border-start-end-radius: 0.5em;" class="cabeçalho-lista__item">Empreendedorismo</a>
+                    <a href="#" class="cabeçalho-lista__item">Biotécnologia</a>
+                    <a href="../Programação/programação.html" style="border-end-start-radius: 0.5em; border-end-end-radius: 0.5em;" class="cabeçalho-lista__item">Programação</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!--BANNER-->
+    <section class="banner">
+        <h2 class="banner__título">Já sabe por onde começar?</h2>
+        <p class="banner__texto">Encontre no nosso site os projetos já feitos nas novas disciplinas do Novo Ensino Médio!</p>
+        <input type="search" placeholder="O que você procura?" class="banner__pesquisa">
+    </section>
+
+    <!--CARROSSEL-->
+    <section id="carrossel">
+        <div class="carrossel">
+            <div class="carrossel__conteúdo">
+                <h2 class="carrossel__título">Projeto sinaleiro</h2>
+                <p>Projeto sinaleiro é o nome dado ao primeiro projeto desenvolvido na disciplina de robótica, sua finalidade tem em simular um sinaleiro a partir das plataformas disponibilizadas pelo estado e depois refazer usar os objetos disponibilizados pelo colégio.</p>
+                <p>Para melhor entendimento, você pode pode receber mais detalhes <a href="https://drive.google.com/file/d/1IdM7KYLM6y03nkod7dT-nvpGpAuu4fSy/view?usp=sharing">aqui.</a></p>
+            </div>
+            <img src="img-robótica/carrossel.png" alt="Robótica" class="carrossel__imagem">
+        </div>
+        <div style="background: #202020;" class="carrossel">
+            <div class="carrossel__conteúdo">
+                <h2 class="carrossel__título">Tinkercad</h2>
+                <p>Tinkercad é uma plataforma educativa usada para projetar protótipos de robótica.</p>
+                <p>Para iniciarmos o projeto sinaleiro, usamos essa plataforma e simulamos ele começando pelo básico, ou seja, a gente fez o sinaleiro normal primeiro.</p>
+                <p>Você pode analisar ele pela imagem à direita.</p>
+            </div>
+            <img src="img-robótica/sinaleiro.png" alt="sinaleiro" class="carrossel__imagem">
+        </div>
+        <div style="background: #1a1a1a;" class="carrossel">
+            <div class="carrossel__conteúdo">
+                <h2 class="carrossel__título">Sinaleiro pedestre</h2>
+                <p>O projeto foi além, e depois tinhamos que criar um sinaleiro para pedestre.</p>
+                <p>Para isso, foi adicionado mais dois leds como visto na imagem, e foi mudado algumas coisas no circuito e no código do sinaleiro, assim, metafóricamente, ajudando os pedestres a passarem.</p>
+                <p>Você pode analisar pela imagem à direita.</p>
+            </div>
+            <img src="img-robótica/sinaleiro-pedestre.png" alt="sinaleiro" class="carrossel__imagem">
+        </div>
+        <div style="background: #111111;" class="carrossel">
+            <div class="carrossel__conteúdo">
+                <h2 class="carrossel__título">Sinaleiro pedestre</h2>
+                <p>O projeto foi além, e depois tinhamos que criar um sinaleiro para pedestre.</p>
+                <p>Para isso, foi adicionado mais dois leds como visto na imagem, e foi mudado algumas coisas no circuito e no código do sinaleiro, assim, metafóricamente, ajudando os pedestres a passarem.</p>
+                <p>Você pode analisar pela imagem à direita.</p>
+            </div>
+            <video src="video-robótica/projeto-sinaleiro.mp4" controls class="carrossel__vídeo"></video>
+        </div>
+    </section>
+
+    <!--CONTATO-->
+    <form method="post" action="https://formspree.io/f/mvonedjq" class="contato">
+        <h2 class="contato__título">Em caso de dúvidas, envie uma mensagem preenchendo o formulário abaixo.</h2>
+        <div class="contato__conteúdo">
+            <div class="contato__formulário">
+                <div class="contato__lista">
+                    <div class="contato__lado">
+                        <div class="contato__item">
+                            <label for="nome">Seu nome:</label><br>
+                            <input type="text" id="nome" name="Nome" placeholder="Digite seu nome" required class="contato__nome">
+                        </div>
+                        <div class="contato__item">
+                            <label for="email">Seu e-mail:</label><br>
+                            <input type="email" id="email" name="email" placeholder="Digite seu email" required class="contato__email">
+                        </div>
+                    </div>
+                    <div class="contato__item">
+                        <label for="mensagem">Sua mensagem:</label><br>
+                        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required class="contato__mensagem"></textarea>
+                    </div>
+                </div>
+                <div class="contato__item">
+                    <input type="submit" name="enviar" value="Enviar" class="contato__enviar">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--RODAPÉ-->
+    <footer class="rodapé">
+        <p class="rodapé__texto">Trabalho desenvolvido na disciplina de programação.</p>
+        <div class="rodapé__itens">
+            <img src="../Página-inicial/img/CEP.png" alt="Logo do Colégio Estadual do Paraná" class="rodapé__imagem">
+            <p class="colégio">Colégio Estadual do Paraná</p>
+        </div>
+    </footer>
+</body>
+</html>
