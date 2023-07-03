@@ -113,6 +113,10 @@ body {
 }
 
 .banner__pesquisa::placeholder {
+
+}
+
+.banner__pesquisa::placeholder {
     color: var(--branco-transparente);
 }
 
