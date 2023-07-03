@@ -112,10 +112,6 @@ body {
 }
 
 .banner__pesquisa::placeholder {
-    
-}
-
-.banner__pesquisa::placeholder {
     color: var(--branco-transparente);
 }
 
@@ -161,7 +157,7 @@ body {
 }
 
 .estudante__conteúdo {
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     display: grid;
 }
 
