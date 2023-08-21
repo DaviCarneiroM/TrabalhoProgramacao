@@ -1,3 +1,3 @@
 function exibirAviso() {
-    alert("asliughoasfjdknglsdrjgbkzj  jgbsouidgbsjdfghilsghfgiokhadfgophdsfiuoghsdfjghsdfghsdfoghsdfoigh")
+    alert("asliughoasfjdknglsdrjgbkzj  jgbsouidgbsjdfghilsghfgiokhadfgophdsfiuoghsdfjghsdfghsdfoghsdfoigh");
 }
