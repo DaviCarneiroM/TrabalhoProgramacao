@@ -1,3 +1,3 @@
 function exibirAviso() {
-    alert("Você enviou o formulário!")
+    alert("Você enviou o formulário!");
 }
