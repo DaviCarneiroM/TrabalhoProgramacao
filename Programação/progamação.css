@@ -7,8 +7,8 @@
     --branco: #FFFFFF;
     --preto: #000000;
     --branco-transparente: #ffffff85;
-    --rosa: #ff00ff;
-    --rosa-escuro: #8f008f;
+    --azul: #87A7D9;
+    --azul-escuro: #597096;
     --cabeçalho: #1C1C1C;
     --banner: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
     --carrossel: #292929;
@@ -133,7 +133,7 @@ body {
 }
 
 .carrossel__título {
-    color: var(--rosa);
+    color: var(--azul);
 }
 
 .carrossel__imagem {
@@ -150,7 +150,7 @@ body {
 
 .contato__título {
     padding-bottom: 1em;
-    color: var(--rosa);
+    color: var(--azul);
     text-align: center;
 }
 
@@ -160,7 +160,7 @@ body {
 }
 
 .contato__formulário {
-    border: 5px solid var(--rosa);
+    border: 5px solid var(--azul);
     background: transparent;
     border-radius: 1em;
     padding: 3em;
@@ -197,7 +197,7 @@ body {
 }
 
 .contato__enviar {
-    background: var(--rosa);
+    background: var(--azul);
     border-radius: 1.25em;
     color: var(--branco);
     cursor: pointer;
@@ -207,7 +207,7 @@ body {
 }
 
 .contato__enviar:hover {
-    background-color: var(--rosa-escuro);
+    background-color: var(--azul-escuro);
 }
 
 /*RODAPÉ*/
