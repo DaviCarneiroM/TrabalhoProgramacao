@@ -30,7 +30,6 @@ body {
 .cabeçalho {
     justify-content: space-around;
     background: var(--cabeçalho);
-    position: fixed;
     display: flex;
     width: 100%;
     z-index: 1;
