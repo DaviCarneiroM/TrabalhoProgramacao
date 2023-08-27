@@ -91,7 +91,7 @@ body {
 
 .banner {
     background: var(--banner);
-    padding: 8em 4em 4em 4em;
+    padding: 4em;
     text-align: center;
 }
 
