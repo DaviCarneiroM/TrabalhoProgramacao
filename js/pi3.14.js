@@ -1,3 +1,0 @@
-function exibirAviso() {
-    alert("asgh");
-}
