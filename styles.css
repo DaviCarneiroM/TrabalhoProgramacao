@@ -298,7 +298,7 @@ body {
     border-radius: 2em;
     color: var(--roxo-escuro);
     cursor: pointer;
-    height: 5em;
+    height: 10em;
     text-align: center;
-    width: 5em;
+    width: 10em;
   }
