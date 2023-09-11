@@ -275,5 +275,11 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
+    height: 100vh;
+    background-color: var(--contato);
 }
+
+.botões-título {
+    color: var(--roxo);
+}
+
