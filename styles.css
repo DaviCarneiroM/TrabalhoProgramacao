@@ -283,3 +283,22 @@ body {
     color: var(--roxo);
 }
 
+.botões-lista {
+    background-color: var(--preto);
+    box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+    border-radius: 2em;
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1em;
+}
+
+.botão {
+    background-color: var(--cabeçalho);
+    border-radius: 2em;
+    color: var(--roxo-escuro);
+    cursor: pointer;
+    height: 3em;
+    text-align: center;
+    width: 3em;
+  }
