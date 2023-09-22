@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biotécnologia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --branco: #FFF;
+            --preto: #000;
+            --cor-principal: #32CD32;
+            --cor-de-fundo: #202020;
+            --cor-do-cabeçalho: #131313;
+            --cor-estudante: #181818;
+            --cor-contato: #121212;
+            --cor-formulário: #090909;
+            --fonte-principal: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--cor-de-fundo);
+            color: var(--branco);
+            font-family: var(--fonte-principal);
+            overflow-x: hidden;
+        }
+
+        /*Cabeçalho*/
+
+        .cabeçalho {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2em;
+            position: fixed;
+            width: 100vw;
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .cabeçalho.cabeçalho-rolagem {
+            background-color: var(--cor-do-cabeçalho);
+            padding: 1em;
+        }
+
+        .cabeçalho-imagem {
+            width: 50px;
+        }
+        
+        .cabeçalho-hambúrguer-botão {
+            display: none;
+        }
+
+        .cabeçalho-hambúrguer {
+            display: none;
+            cursor: pointer;
+        }
+
+        .cabeçalho-hambúrguer-linha {
+            width: 40px;
+            height: 4px;
+            border-radius: 2em;
+            background-color: var(--branco);
+            margin: 0.5em;
+        }
+
+        .cabeçalho-hambúrguer-lista {
+            display: none;
+        }
+        
+        .cabeçalho-lista {
+            display: flex;
+            gap: 2em;
+        }
+
+        .cabeçalho-lista-item {
+            text-decoration: none;
+            color: var(--branco);
+            position: relative;
+        }
+
+        .cabeçalho-lista-item::after {
+            content: " ";
+            width: 0;
+            height: 2px;
+            background-color: var(--branco);
+            position: absolute;
+            top: 1.5em;
+            left: 0;
+            border-radius: 1em;
+            transition: 0.5s;
+        }
+
+        .cabeçalho-lista-item:hover::after {
+            width: 100%;
+        }
+
+        .cabeçalho-menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cabeçalho-menu::after {
+            content: " ";
+            width: 6em;
+            height: 3em;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .cabeçalho-menu-lista {
+            border-radius: 0.5em;
+            background-color: var(--cor-do-cabeçalho);
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25em;
+            padding: 1em;
+            align-items: center;
+            top: 75%;
+            opacity: 0;
+            transition: 0.5s;
+            pointer-events: none;
+        }
+
+        .cabeçalho-menu-lista-item {
+            text-decoration: none;
+            color: var(--branco);
+            transition: 0.5s;
+        }
+
+        .cabeçalho-menu-lista-item:hover {
+            color: var(--cor-principal);
+        }
+
+        .cabeçalho-menu:hover .cabeçalho-menu-lista {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        /*Banner*/
+
+        .banner {
+            background-image: url(imagens/bannerBiotécnologia.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            row-gap: 1em;
+            box-shadow: 1px 1px 100px var(--preto);
+        }
+
+        .banner-título {
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .banner-pesquisa {
+            background-color: transparent;
+            padding: 1em;
+            color: var(--branco);
+            border-radius: 2em;
+            border: 1px solid;
+            width: 35%;
+            outline: none;
+        }
+
+        .banner-pesquisa::-webkit-search-cancel-button {
+            display: none;
+        }
+
+        /*Carrossel*/
+
+        .carrossel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .carrossel-conteúdo {
+            width: 35%;
+        }
+
+        .carrossel-título {
+            color: var(--cor-principal);
+        }
+
+        .carrossel-imagem {
+            width: 25%;
+        }
+
+        /*Contato*/
+
+        .contato {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100vh;
+            background-color: var(--cor-contato);
+        }
+
+        .contato-conteúdo {
+            width: 30%;
+        }
+
+        .contato-título {
+            font-size: 3em;
+        }
+
+        .feedback {
+            color: var(--cor-principal);
+        }
+
+        .formulário {
+            background-color: var(--cor-formulário);
+            padding: 3em;
+            display: flex;
+            flex-direction: column;
+            border-radius: 1em;
+            gap: 2em;
+        }
+
+        .formulário-nome,
+        .formulário-email {
+            background: transparent;
+            border-radius: 0.5em;
+            border: 1px solid;
+            color: var(--branco);
+            padding: 0.5em;
+            width: 100%;
+            outline: none;
+            transition: 0.5s;
+        }
+
+        .formulário-mensagem {
+            background: transparent;
+            border-radius: 0.5em;
+            border: 1px solid;
+            color: var(--branco);
+            padding: 0.5em;
+            height: 125px;
+            resize: none;
+            outline: none;
+            width: 100%;
+            transition: 0.5s;
+        }
+        
+        .formulário-nome:hover,
+        .formulário-email:hover,
+        .formulário-mensagem:hover {
+            border-color: var(--cor-principal);
+        }
+
+        .formulário-enviar {
+            background: transparent;
+            border-radius: 0.5em;
+            color: var(--branco);
+            cursor: pointer;
+            padding: 1em;
+            width: 100%;
+            border: 0.25em solid var(--cor-principal);
+            transition: 0.5s;
+        }
+
+        .formulário-enviar:hover {
+            background-color: var(--cor-principal);
+        }
+
+        /*Rodapé*/
+
+        .rodapé {
+            background-color: var(--preto);
+            text-align: center;
+            padding: 1em 0em;
+        }
+
+        .rodapé-conteúdo {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .rodapé-imagem {
+            padding: 0.5em 0.5em 0em 0.5em;
+            width: 3%;
+        }
+
+        .colégio {
+            padding-top: 0.5em;
+        }
+
+        @media screen and (max-width: 999px) {
+
+            /*Cabeçalho*/
+
+            .cabeçalho {
+                justify-content: space-between;
+            }
+
+            .cabeçalho-hambúrguer {
+                display: block;
+            }
+
+            .cabeçalho-hambúrguer-lista {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 50vw;
+                height: 50vh;
+                background-color: var(--cor-do-cabeçalho);
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                transform: translateX(100%);
+                transition: 0.5s;
+                z-index: 1;
+            }
+
+            .cabeçalho-hambúrguer-lista-item {
+                text-decoration: none;
+                color: var(--branco);
+                position: relative;
+            }
+
+            .cabeçalho-hambúrguer-lista-item:after {
+            content: " ";
+            width: 100%;
+            height: 1px;
+            background-color: var(--branco);
+            position: absolute;
+            top: 1.75em;
+            left: 0;
+            border-radius: 1em;
+            transition: 0.5s;
+        }
+
+            .cabeçalho-hambúrguer-botão:checked~.cabeçalho-hambúrguer-lista {
+                transform: translateX(0);
+            }
+
+            .cabeçalho-lista {
+                display: none;
+            }
+
+            /*Banner*/
+
+            .banner-título {
+                font-size: 1.5em;
+                width: 90%;
+            }
+
+            .banner-pesquisa {
+                width: 75%;
+            }
+
+            /*Carrossel*/
+
+            .carrossel {
+                flex-direction: column;
+            }
+
+            .carrossel-conteúdo {
+                width: 75%;
+            }
+
+            .carrossel-imagem {
+                width: 60%;
+            }
+
+            /*Contato*/
+
+            .contato {
+                justify-content: center;
+                flex-direction: column;
+                gap: 2em;
+            }
+
+            .contato-conteúdo {
+                width: 80%;
+            }
+
+            .contato-título {
+                font-size: 1.5em;
+            }
+
+            .contato-parágrafo {
+                font-size: 12px;
+            }
+
+            .formulário {
+                padding: 2.5em;
+            }
+
+            /*Rodape*/
+
+            .rodapé-imagem {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="cabeçalho">
+        <img class="cabeçalho-imagem" src="imagens/logoCEP.png" alt="Logo do Colégio Estadual do Paraná">
+        <input class="cabeçalho-hambúrguer-botão" id="botão" type="checkbox">
+        <label for="botão">
+            <div class="cabeçalho-hambúrguer">
+                <div class="cabeçalho-hambúrguer-linha"></div>
+                <div class="cabeçalho-hambúrguer-linha"></div>
+                <div class="cabeçalho-hambúrguer-linha"></div>
+            </div>
+        </label>
+        <div class="cabeçalho-hambúrguer-lista">
+            <a class="cabeçalho-hambúrguer-lista-item" href="index.html">Página Inicial</a>
+            <a class="cabeçalho-hambúrguer-lista-item" href="robótica.html">Robótica</a>
+            <a class="cabeçalho-hambúrguer-lista-item" href="empreendedorismo.html">Empreendedorismo</a>
+            <a class="cabeçalho-hambúrguer-lista-item" href="programação.html">Programação</a>
+        </div>
+        <nav class="cabeçalho-lista">
+            <a class="cabeçalho-lista-item" href="index.html">Página Inicial</a>
+            <a class="cabeçalho-lista-item" href="#carrossel">Nossos Projetos</a>
+            <div class="cabeçalho-menu">
+                <a class="cabeçalho-lista-item" href="javascript:void(0)">Disciplinas</a>
+                <div class="cabeçalho-menu-lista">
+                    <a class="cabeçalho-menu-lista-item" href="robótica.html">Robótica</a>
+                    <a class="cabeçalho-menu-lista-item" href="empreendedorismo.html">Empreendedorismo</a>
+                    <a class="cabeçalho-menu-lista-item" href="programação.html">Programação</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="banner">
+        <h2 class="banner-título">ENCONTRE AQUI OS PROJETOS JÁ REALIZADOS!</h2>
+        <input class="banner-pesquisa" type="search" placeholder="O que você procura?">
+    </section>
+    <section class="carrossel" id="carrossel">
+        <div class="carrossel-conteúdo">
+            <h2 class="carrossel-título">Projetos</h2>
+            <p class="carrossel-parágrafo">Este site tem como objetivo reunir todos os projetos realizados ao longo do ano pelos alunos do Colégio Estadual do Paraná nas quatro novas disciplinas do Novo Ensino Médio, sendo elas: Programação, Robótica, Empreendedorismo e Biotécnologia.<br>Caso você precise entrar em contato com os responsáveis pelo site, <a href="#contato">clique aqui.</a></p>
+        </div>
+        <img class="carrossel-imagem" src="imagens/carrosselBiotécnologia.png" alt="Imagem ilustrativa do carrossel">
+    </section>
+    <section class="contato" id="contato">
+        <div class="contato-conteúdo">
+            <h2 class="contato-título">Envie o seu <span class="feedback">feedback</span> geral preenchendo os dados no nosso formulário</h2>
+            <p class="contato-parágrafo">É necessário completar todos os campos.</p>
+        </div>
+        <div class="contato-conteúdo">
+            <form class="formulário" action="https://formspree.io/f/mvonedjq" method="post">
+                <div class="formulário-item">
+                    <label for="nome">Seu nome:</label>
+                    <input class="formulário-nome" id="nome" name="nome" type="text" placeholder="Digite seu nome" autocomplete="off" required>
+                </div>
+                <div class="formulário-item">
+                    <label for="email">Seu email:</label>
+                    <input class="formulário-email" id="email" type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+                </div>
+                <div class="formulário-item">
+                    <label for="mensagem">Sua mensagem:</label>
+                    <textarea class="formulário-mensagem" id="mensagem" name="mensagem" placeholder="Digite sua mensagem" autocomplete="off" required></textarea>
+                </div>
+                <div class="formulário-item">
+                    <input class="formulário-enviar" type="submit" name="enviar" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="rodapé">
+        <p class="rodapé-parágrafo">Trabalho desenvolvido na disciplina de programação.</p>
+        <div class="rodapé-conteúdo">
+            <img class="rodapé-imagem" src="imagens/logoCEP.png" alt="Logo do Colégio Estadual do Paraná">
+            <p class="colégio">Colégio Estadual do Paraná</p>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener("scroll", function() {
+            var cabeçalho = document.querySelector(".cabeçalho")
+            cabeçalho.classList.toggle("cabeçalho-rolagem", window.scrollY > 0)
+        })
+    </script>
+</body>
+</html>
