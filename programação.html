@@ -221,17 +221,16 @@
         .teclado {
             background-color: var(--preto);
             box-shadow: 5px 5px var(--cor-principal);
-            border-radius: 30px;
+            border-radius: 2em;
             display: grid;
-            gap: 10px;
-            grid-template-columns: 33% 33% 33% 1fr;
+            gap: 0.5em;
+            grid-template-columns: repeat(3, 1fr);
             padding: 10px;
         }
 
         .tecla {
             background-color: var(--cor-principal);
-            border-radius: 30px;
-            box-shadow: 3px 3px 0 var(--preto);
+            border-radius: 2em;
             cursor: pointer;
             height: 120px;
             font-size: 1.75em;
