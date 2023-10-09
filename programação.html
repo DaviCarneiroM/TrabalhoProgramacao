@@ -590,12 +590,11 @@
 
             tecla.onclick = function () {
                 tocaSom(idAudio);
-                console.log("True")
             }
 
             tecla.onkeydown = function (evento) {
 
-                if (evento.code === 'Space' || evento.code === 'Enter') {
+                if (evento.code === 'Space' || evento.code === 'Enter' || evento.code === onclick) {
                     tecla.classList.add('ativa');
                     console.log('ativa');
                 }
