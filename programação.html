@@ -223,27 +223,24 @@
             background-color: var(--preto);
             box-shadow: 5px 5px var(--cor-principal);
             border-radius: 2em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5em;
-            padding: 1em;
-        }
-
-        .teclado_lista {
             display: grid;
-            grid-template-columns: 33%;
+            gap: 0.5em;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 10px;
         }
 
         .tecla {
             background-color: var(--cor-de-fundo);
             border-radius: 1em;
             cursor: pointer;
-            padding: 2em;
+            height: 120px;
+            font-size: 1.75em;
             font-weight: bold;
+            line-height: 120px;
+            text-align: center;
+            width: 120px;
             border: none;
             color: var(--branco);
-            text-align: center;
         }
 
         .tecla:hover {
@@ -433,14 +430,6 @@
                 width: 60%;
             }
 
-            .teclado {
-                width: 80%;
-            }
-
-            .tecla {
-                font-size: 24px;
-            }
-
             /*Contato*/
 
             .contato {
@@ -517,21 +506,17 @@
     <section class="carrossel-botão">
         <h2 class="carrossel-botão-título">BOTÕES</h2>
         <section class="teclado">
-            <div class="teclado_lista">
-                <button class="tecla tecla_pom">Uepa</button>
-                <button class="tecla tecla_clap">zZz</button>
-                <button class="tecla tecla_tim">Auuu</button>
-            </div>
-            <div class="teclado_lista">
-                <button class="tecla tecla_puff">Cano</button>
-                <button class="tecla tecla_splash">zZz2</button>
-                <button class="tecla tecla_toim">SUS</button>
-            </div>
-            <div class="teclado_lista">
-                <button class="tecla tecla_psh">JoJo</button>
-                <button class="tecla tecla_tic">MSG</button>
-                <button class="tecla tecla_tom">Chapa</button>
-            </div>
+            <button class="tecla tecla_pom">Uepa</button>
+            <button class="tecla tecla_clap">zZz</button>
+            <button class="tecla tecla_tim">Pidão</button>
+
+            <button class="tecla tecla_puff">Cano</button>
+            <button class="tecla tecla_splash">mimimi</button>
+            <button class="tecla tecla_toim">SUS</button>
+
+            <button class="tecla tecla_psh">JoJo</button>
+            <button class="tecla tecla_tic">MSG</button>
+            <button class="tecla tecla_tom">Chapa</button>
         </section>
         <audio src="sons/keyq.wav" id="som_tecla_pom"></audio>
         <audio src="sons/keyw.wav" id="som_tecla_clap"></audio>
