@@ -267,7 +267,7 @@
             border-top: 1px solid var(--cor-principal);
         }
 
-        #calculadora {
+        #calc {
             width: 400px;
             padding: 0.5em;
             background-color: #c4c4c4;
@@ -276,24 +276,24 @@
             flex-direction: column;
         }
 
-        .calculadora-título {
+        #calc h3 {
             font-size: 0.8em;
             font-weight: 300;
             color: #666;
         }
 
-        #operações {
+        #operations {
             text-align: right;
         }
 
-        #previu-operação {
+        #previous-operation {
             color: #777;
             padding: 0.2em;
             overflow-wrap: break-word;
             min-height: 1.6em;
         }
 
-        #acontecendo-operação {
+        #current-operation {
             min-height: 1.6em;
             font-size: 3em;
             font-weight: 700;
@@ -301,13 +301,13 @@
             overflow-wrap: break-word;
         }
 
-        #botões-container {
+        #buttons-container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 3px;
         }
 
-        #botões-container button {
+        #buttons-container button {
             border: 1px solid transparent;
             border-radius: 0;
             height: 4em;
@@ -316,21 +316,21 @@
             cursor: pointer;
         }
 
-        #botões-container .número {
+        #buttons-container .number {
             background-color: #f3f3f3;
         }
 
-        #botões-container button:hover {
+        #buttons-container button:hover {
             background-color: #bababa;
             border-color: #999;
         }
 
-        #botões-container #igualdade-botão {
+        #buttons-container #equal-btn {
             grid-column: span 2;
             background-color: #75a5cb;
         }
 
-        #botões-container #igualdade-botão:hover {
+        #buttons-container #equal-btn:hover {
             grid-column: span 2;
             background-color: #3a91d8;
         }
@@ -615,31 +615,31 @@
     </section>
     <section class="carrossel-calculadora">
         <div id="calculadora">
-            <h3 class="calculadora-título">Calculadora</h3>
-            <div id="operações">
-                <div id="previu-operação"></div>
-                <div id="acontecendo-operação"></div>
+            <h3>Calculadora</h3>
+            <div id="operations">
+                <div id="previous-operation"></div>
+                <div id="current-operation"></div>
             </div>
-            <div id="botões-container">
+            <div id="buttons-container">
                 <button>CE</button>
                 <button>C</button>
                 <button>DEL</button>
                 <button>/</button>
-                <button class="número">7</button>
-                <button class="número">8</button>
-                <button class="número">9</button>
+                <button class="number">7</button>
+                <button class="number">8</button>
+                <button class="number">9</button>
                 <button>*</button>
-                <button class="número">4</button>
-                <button class="número">5</button>
-                <button class="número">6</button>
+                <button class="number">4</button>
+                <button class="number">5</button>
+                <button class="number">6</button>
                 <button>-</button>
-                <button class="número">1</button>
-                <button class="número">2</button>
-                <button class="número">3</button>
+                <button class="number">1</button>
+                <button class="number">2</button>
+                <button class="number">3</button>
                 <button>+</button>
-                <button class="número">0</button>
-                <button class="número">.</button>
-                <button id="igualdade-botão">=</button>
+                <button class="number">0</button>
+                <button class="number">.</button>
+                <button id="equal-btn">=</button>
             </div>
         </div>
     </section>
