@@ -249,6 +249,7 @@
             background-color: var(--cinza);
         }
 
+        .tecla.ativa,
         .tecla:active {
             background-color: var(--cor-principal);
         }
@@ -680,7 +681,7 @@
                 tocaSom(idAudio);
             }
 
-            tecla.onkeypress = function (evento) {
+            tecla.onkeydown = function (evento) {
 
                 if (evento.code === 'Space' || evento.code === 'Enter') {
                     tecla.classList.add('ativa');
