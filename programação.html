@@ -262,7 +262,7 @@
 
         /*Calculadora*/
 
-        #calc {
+        #calculadora {
             width: 400px;
             padding: 0.5em;
             background-color: #c4c4c4;
@@ -271,24 +271,24 @@
             flex-direction: column;
         }
 
-        #calc h3 {
+        #calculadora h3 {
             font-size: 0.8em;
             font-weight: 300;
             color: #666;
         }
 
-        #operations {
+        #operações {
             text-align: right;
         }
 
-        #previous-operation {
+        #previu-operação {
             color: #777;
             padding: 0.2em;
             overflow-wrap: break-word;
             min-height: 1.6em;
         }
 
-        #current-operation {
+        #acontecendo-operação {
             min-height: 1.6em;
             font-size: 3em;
             font-weight: 700;
@@ -296,7 +296,7 @@
             overflow-wrap: break-word;
         }
 
-        #buttons-container {
+        #botões-container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 3px;
@@ -609,32 +609,32 @@
         <script src="main.js"></script>
     </section>
     <section class="carrossel-calculadora">
-        <div id="calc">
+        <div id="calculadora">
             <h3>Calculadora</h3>
-            <div id="operations">
-                <div id="previous-operation"></div>
-                <div id="current-operation"></div>
+            <div id="operações">
+                <div id="previu-operação"></div>
+                <div id="acontecendo-operação"></div>
             </div>
-            <div id="buttons-container">
+            <div id="botões-container">
                 <button>CE</button>
                 <button>C</button>
                 <button>DEL</button>
                 <button>/</button>
-                <button class="number">7</button>
-                <button class="number">8</button>
-                <button class="number">9</button>
+                <button class="número">7</button>
+                <button class="número">8</button>
+                <button class="número">9</button>
                 <button>*</button>
-                <button class="number">4</button>
-                <button class="number">5</button>
-                <button class="number">6</button>
+                <button class="número">4</button>
+                <button class="número">5</button>
+                <button class="número">6</button>
                 <button>-</button>
-                <button class="number">1</button>
-                <button class="number">2</button>
-                <button class="number">3</button>
+                <button class="número">1</button>
+                <button class="número">2</button>
+                <button class="número">3</button>
                 <button>+</button>
-                <button class="number">0</button>
-                <button class="number">.</button>
-                <button id="equal-btn">=</button>
+                <button class="número">0</button>
+                <button class="número">.</button>
+                <button id="igualdade-botão">=</button>
             </div>
         </div>
     </section>
@@ -718,150 +718,135 @@
     </script>
     <script>
         const previousOperationText = document.querySelector("#previous-operation");
-const currentOperationText = document.querySelector("#current-operation");
-const buttons = document.querySelectorAll("#buttons-container button");
+        const currentOperationText = document.querySelector("#current-operation");
+        const buttons = document.querySelectorAll("#buttons-container button");
 
-class Calculator {
-  constructor(previousOperationText, currentOperationText) {
-    this.previousOperationText = previousOperationText;
-    this.currentOperationText = currentOperationText;
-    this.currentOperation = "";
-  }
+        class Calculator {
+            constructor(previousOperationText, currentOperationText) {
+            this.previousOperationText = previousOperationText;
+            this.currentOperationText = currentOperationText;
+            this.currentOperation = "";
+        }
 
-  // add digit to calculator screen
-  addDigit(digit) {
-    console.log(digit);
-    // Check if number already has a dot
-    if (digit === "." && this.currentOperationText.innerText.includes(".")) {
-      return;
-    }
+        addDigit(digit) {
+            console.log(digit);
+            if (digit === "." && this.currentOperationText.innerText.includes(".")) {
+                return;
+            }
 
-    this.currentOperation = digit;
-    this.updateScreen();
-  }
+            this.currentOperation = digit;
+            this.updateScreen();
+        }
 
-  // process all calculator operations
-  processOperation(operation) {
-    // Check if current value is empty
-    if (this.currentOperationText.innerText === "" && operation !== "C") {
-      // Change operation
-      if (this.previousOperationText.innerText !== "") {
-        this.changeOperation(operation);
-      }
-      return;
-    }
+        processOperation(operation) {
+                if (this.currentOperationText.innerText === "" && operation !== "C") {
+                if (this.previousOperationText.innerText !== "") {
+                    this.changeOperation(operation);
+                }
+                return;
+            }
 
-    // Get current and previous values
-    let operationValue;
-    let previous = +this.previousOperationText.innerText.split(" ")[0];
-    let current = +this.currentOperationText.innerText;
+            let operationValue;
+            let previous = +this.previousOperationText.innerText.split(" ")[0];
+            let current = +this.currentOperationText.innerText;
 
-    switch (operation) {
-      case "+":
-        operationValue = previous + current;
-        this.updateScreen(operationValue, operation, current, previous);
-        break;
-      case "-":
-        operationValue = previous - current;
-        this.updateScreen(operationValue, operation, current, previous);
-        break;
-      case "*":
-        operationValue = previous * current;
-        this.updateScreen(operationValue, operation, current, previous);
-        break;
-      case "/":
-        operationValue = previous / current;
-        this.updateScreen(operationValue, operation, current, previous);
-        break;
-      case "DEL":
-        this.processDelOperator();
-        break;
-      case "CE":
-        this.processClearCurrentOperator();
-        break;
-      case "C":
-        this.processClearOperator();
-        break;
-      case "=":
-        this.processEqualOperator();
-        break;
-      default:
-        return;
-    }
-  }
+            switch (operation) {
+                case "+":
+                    operationValue = previous + current;
+                    this.updateScreen(operationValue, operation, current, previous);
+                    break;
+                case "-":
+                    operationValue = previous - current;
+                    this.updateScreen(operationValue, operation, current, previous);
+                    break;
+                case "*":
+                    operationValue = previous * current;
+                    this.updateScreen(operationValue, operation, current, previous);
+                    break;
+                case "/":
+                    operationValue = previous / current;
+                    this.updateScreen(operationValue, operation, current, previous);
+                    break;
+                case "DEL":
+                    this.processDelOperator();
+                    break;
+                case "CE":
+                    this.processClearCurrentOperator();
+                    break;
+                case "C":
+                    this.processClearOperator();
+                    break;
+                case "=":
+                    this.processEqualOperator();
+                    break;
+                default:
+                    return;
+            }
+        }
 
-  // Change values of calculator screen
-  updateScreen(
-    operationValue = null,
-    operation = null,
-    current = null,
-    previous = null
-  ) {
-    if (operationValue === null) {
-      // Append number to current value
-      this.currentOperationText.innerText += this.currentOperation;
-    } else {
-      // Check if value is zero, if is just add current value
-      if (previous === 0) {
-        operationValue = current;
-      }
-      // Add current value to previous
-      this.previousOperationText.innerText = `${operationValue} ${operation}`;
-      this.currentOperationText.innerText = "";
-    }
-  }
+        updateScreen(
+            operationValue = null,
+            operation = null,
+            current = null,
+            previous = null
+        ) {
+            if (operationValue === null) {
+            this.currentOperationText.innerText += this.currentOperation;
+            } else {
+            if (previous === 0) {
+                operationValue = current;
+            }
+            this.previousOperationText.innerText = `${operationValue} ${operation}`;
+            this.currentOperationText.innerText = "";
+            }
+        }
 
-  // Change math operation
-  changeOperation(operation) {
-    const mathOperations = ["*", "-", "+", "/"];
+        changeOperation(operation) {
+            const mathOperations = ["*", "-", "+", "/"];
 
-    if (!mathOperations.includes(operation)) {
-      return;
-    }
+            if (!mathOperations.includes(operation)) {
+            return;
+            }
 
-    this.previousOperationText.innerText =
-      this.previousOperationText.innerText.slice(0, -1) + operation;
-  }
+                this.previousOperationText.innerText =
+                this.previousOperationText.innerText.slice(0, -1) + operation;
+            }
 
-  // Delete a digit
-  processDelOperator() {
-    this.currentOperationText.innerText =
-      this.currentOperationText.innerText.slice(0, -1);
-  }
+            processDelOperator() {
+                this.currentOperationText.innerText =
+                this.currentOperationText.innerText.slice(0, -1);
+            }
 
-  // Clear current operation
-  processClearCurrentOperator() {
-    this.currentOperationText.innerText = "";
-  }
+            processClearCurrentOperator() {
+                this.currentOperationText.innerText = "";
+            }
 
-  // Clear all operations
-  processClearOperator() {
-    this.currentOperationText.innerText = "";
-    this.previousOperationText.innerText = "";
-  }
+            processClearOperator() {
+                this.currentOperationText.innerText = "";
+                this.previousOperationText.innerText = "";
+            }
 
-  // Process an operation
-  processEqualOperator() {
-    let operation = this.previousOperationText.innerText.split(" ")[1];
+            processEqualOperator() {
+                let operation = this.previousOperationText.innerText.split(" ")[1];
 
-    this.processOperation(operation);
-  }
-}
+                this.processOperation(operation);
+            }   
+        }
 
-const calc = new Calculator(previousOperationText, currentOperationText);
+        const calc = new Calculator(previousOperationText, currentOperationText);
 
-buttons.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const value = e.target.innerText;
+        buttons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const value = e.target.innerText;
 
-    if (+value >= 0 || value === ".") {
-      console.log(value);
-      calc.addDigit(value);
-    } else {
-      calc.processOperation(value);
-    }
-  });
-});
+            if (+value >= 0 || value === ".") {
+            console.log(value);
+            calc.addDigit(value);
+            } else {
+            calc.processOperation(value);
+            }
+        });
+        });
     </script>
 </body>
 </html>
