@@ -680,7 +680,7 @@
                 tocaSom(idAudio);
             }
 
-            tecla.onkeydown = function (evento) {
+            tecla.onkeypress = function (evento) {
 
                 if (evento.code === 'Space' || evento.code === 'Enter') {
                     tecla.classList.add('ativa');
